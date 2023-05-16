@@ -1,0 +1,15 @@
+{
+  "name": "@ethico/fakerandom",
+  "version": "1.0.0",
+  "description": "This is a random data generator package for generating different types of data",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shariar Hasan",
+  "license": "MIT",
+  "dependencies": {
+    "@ethico/fakeuuid": "^1.0.0"
+  }
+}
