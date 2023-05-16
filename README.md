@@ -238,8 +238,8 @@ Selects a random element from the provided array.
 - example :
     ```javascript
     import { frElement } from "@ethico/fakerandom";
-    console.log(frInt()); // Output: 0
-    console.log(frInt([1,2,3,4,5,6])); // Output: 4
+    console.log(frElement()); // Output: 0
+    console.log(frElement([1,2,3,4,5,6])); // Output: 4
     ```
 
 ### **frBoolean()**
@@ -261,11 +261,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Contributions are welcome! Contact the author for contribution
 
-## Acknowledgements
-
-This package is built upon the excellent work of other open-source libraries and contributors. We would like to acknowledge and thank them for their contributions.
-
-`fakeuuid` - Used for generating fake UUIDs.
 
 ## Contact
 
