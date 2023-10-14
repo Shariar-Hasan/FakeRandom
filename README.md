@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/@ethico/fakerandom)](https://www.npmjs.com/package/@ethico/fakerandom)
 [![License](https://img.shields.io/github/license/Shariar-Hasan/FakeRandom)](https://github.com/Shariar-Hasan/FakeRandom/LICENSE)
 
-This is a random data generator package for generating different types of data.
+The Fake Random package is a versatile random data generator that allows you to generate various types of realistic and randomized data.
 
 ## Installation
 

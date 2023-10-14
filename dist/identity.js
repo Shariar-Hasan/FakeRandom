@@ -8,14 +8,14 @@ import {
   blockLetters,
   cityNames,
   streetNames,
-} from "./../data/identitiyDatas.js";
+} from "./../datasets/identitiyDatas.js";
 import {
   countries,
   colors,
   rgbColors,
   hexColors,
   emailDomains,
-} from "./../data/otherDatas.js";
+} from "./../datasets/otherDatas.js";
 
 // ****************First name Random********* ***************************
 export const frFirstName = (gender = "male") => {

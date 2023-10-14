@@ -1,21 +1,12 @@
 {
   "name": "@ethico/fakerandom",
-  "version": "1.0.2",
-  "description": "This is a random data generator package for generating different types of data",
+  "version": "1.0.3",
+  "description": "The Fake Random package is a versatile random data generator that allows you to generate various types of realistic and randomized data.",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "random",
-    "data",
-    "generator",
-    "faker",
-    "mock",
-    "test",
-    "utility"
-  ],
-  "author": "Shariar Hasan",
-  "license": "MIT"
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

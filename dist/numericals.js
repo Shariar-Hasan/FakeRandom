@@ -1,7 +1,10 @@
+import { isValidbyType } from "./validation/validations";
+
 export const frInt = ({ min = 0, max = 10 } = {}) => {
-  if (min >= max) {
-    max += min;
-  }
+  if (isValidbyType(min, "Number"))
+    if (min >= max) {
+      max += min;
+    }
   return min + Math.floor(Math.random() * Math.floor(max - min + 1));
 };
 
