@@ -5,17 +5,10 @@ import {
   femaleLastNames,
   maleLastNames,
   femaleFirstNames,
-  blockLetters,
   cityNames,
   streetNames,
 } from "./../datasets/identitiyDatas.js";
-import {
-  countries,
-  colors,
-  rgbColors,
-  hexColors,
-  emailDomains,
-} from "./../datasets/otherDatas.js";
+import { countries, emailDomains } from "./../datasets/otherDatas.js";
 
 // ****************First name Random********* ***************************
 export const frFirstName = (gender = "male") => {
@@ -75,19 +68,6 @@ export const frEmail = ({
   domain = frElement(emailDomains),
 }) => {
   return `${frUserName(name) + domain}`;
-};
-
-// ****************color Random********* ***************************
-export const frColor = (code = "color") => {
-  if (code === "color") {
-    return frElement(colors);
-  } else if (code === "rgb") {
-    return frElement(rgbColors);
-  } else if (code === "hex") {
-    return frElement(hexColors);
-  } else {
-    return "wrong color mode";
-  }
 };
 
 // ****************Country Random********* ***************************
@@ -157,20 +137,18 @@ export const frCreditCard = ({ cardType = "Visa" } = {}) => {
 };
 
 // ****************Date Random********* ***************************
-export const frDate = ({ type = "future", seperator = "/" } = {}) => {
-  console.log(type, seperator);
-  if (!type) {
-    return "date type not found";
+export const frDate = ({ type = "future", seperator = "/", before = "01/01/2000" } = {}) => {
+  // validation
+  if (!["future", "past", "any"].find((t) => t === type)) {
+    throw new Error("Invalid Type")
   }
-  if (!(type === "future" || type === "past" || type === "any")) {
-    return "type not matched";
-  }
+
   let today = new Date().getTime();
   let newDate;
   if (type === "future") {
-    newDate = new Date(today + frInt({ max: 3650 }) * 24 * 3600000);
+    newDate = new Date(today + frInt({ max: 36500 }) * 24 * 3600000);
   } else if (type === "past") {
-    newDate = new Date(today - frInt({ max: 3650 }) * 24 * 3600000);
+    newDate = new Date(today - frInt({ max: 36500 }) * 24 * 3600000);
   } else {
     if (frBoolean()) {
       today += frInt({ max: 3650 }) * 24 * 3600000;

@@ -1,9 +1,9 @@
-const types = ["number", "string", "object", "array", "boolean"];
-export const isValidbyType = (value, type) => {
-  if (type in types) {
+const types = ["number", "string", "object", "array", "boolean", "function"];
+const typecheck = (value, type) => {
+  // checking every types
+  if (!types.find((t) => t === type)) {
     return false;
-  }
-  if (type === "object") {
+  } else if (type === "object") {
     return (
       Object(value) === value &&
       !Array.isArray(value) &&
@@ -13,5 +13,16 @@ export const isValidbyType = (value, type) => {
     return Array.isArray(item);
   } else {
     return type === typeof value;
+  }
+};
+
+// main function
+export const isValidbyType = (value, type) => {
+  if (Array.isArray(type)) {
+    return type.reduce(
+      (retValue, typeValue) => retValue || typecheck(value, typeValue)
+    );
+  } else {
+    return typecheck(value, type);
   }
 };
