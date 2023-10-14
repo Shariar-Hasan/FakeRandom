@@ -1,6 +1,6 @@
 {
   "name": "@ethico/fakerandom",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "The Fake Random package is a versatile random data generator that allows you to generate various types of realistic and randomized data.",
   "main": "index.js",
   "scripts": {
